@@ -1,0 +1,12 @@
+public class MyHashTable<K, V> {
+    private HashNode<K, V>[] chainArray;
+    private int M = 11; // 默认桶的数量
+    private int size;
+
+    public MyHashTable(int M) {
+        this.M = M;
+        // 关键：强制类型转换
+        this.chainArray = (HashNode<K, V>[]) new HashNode[M];
+        this.size = 0;
+    }
+}
